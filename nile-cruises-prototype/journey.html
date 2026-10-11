@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ViaMondo | Nile Journey</title>
+    <meta
+      name="description"
+      content="Interactive Nile journey with route animation, landmarks and itinerary progression."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-journey">
+    <div class="journey-shell">
+      <header class="journey-header">
+        <div class="brand-wrap small">
+          <div class="brand-mark">V</div>
+          <div>
+            <div class="brand-name">ViaMondo</div>
+            <div class="brand-tag">Nile Cruises</div>
+          </div>
+        </div>
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="index.html">Nile Cruises</a>
+          <span>/</span>
+          <span id="crumb-itinerary">Journey</span>
+        </nav>
+        <a class="back-link" href="index.html">Back to itinerary selection</a>
+      </header>
+
+      <main class="journey-content">
+        <section class="journey-intro panel">
+          <p class="eyebrow">welcome</p>
+          <h1>Welcome to Your Nile Journey</h1>
+          <p id="journey-summary">
+            Follow the river, discover ancient landmarks, and explore every day of your journey.
+          </p>
+        </section>
+
+        <section class="scene-layout">
+          <div class="map-panel panel">
+            <div class="scene-header">
+              <div>
+                <span class="mini-kicker">Route</span>
+                <h2 id="journey-name">Aswan to Luxor</h2>
+              </div>
+              <div class="progress-pill" id="progress-pill">Day 1 of 4</div>
+            </div>
+
+            <div class="map-wrap" aria-live="polite">
+              <svg
+                id="river-svg"
+                viewBox="0 0 760 420"
+                preserveAspectRatio="xMidYMid meet"
+                aria-label="Animated Nile route"
+              >
+                <defs>
+                  <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#5fb4c0" />
+                    <stop offset="50%" stop-color="#3e8b9b" />
+                    <stop offset="100%" stop-color="#1d5a66" />
+                  </linearGradient>
+                  <linearGradient id="riverGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#8dd7e6" stop-opacity="0.88" />
+                    <stop offset="100%" stop-color="#2b7788" stop-opacity="0.9" />
+                  </linearGradient>
+                </defs>
+                <path id="river-base" class="river-base" d="" />
+                <path id="river-route" class="river-route" d="" />
+                <g id="route-points"></g>
+                <g id="landmarks"></g>
+                <g id="boat-layer"></g>
+              </svg>
+            </div>
+
+            <div class="controls" aria-label="Journey controls">
+              <button class="control-btn" id="pause-btn" type="button">Pause Journey</button>
+              <button class="control-btn" id="resume-btn" type="button">Resume Journey</button>
+              <button class="control-btn" id="replay-btn" type="button">Replay Journey</button>
+              <button class="control-btn" id="next-day-btn" type="button">Next Day</button>
+              <button class="control-btn" id="restart-btn" type="button">Restart Journey</button>
+            </div>
+          </div>
+
+          <aside class="timeline-panel panel">
+            <div class="timeline-head">
+              <span class="mini-kicker">Itinerary</span>
+              <h2>Day-by-day route</h2>
+            </div>
+            <div class="timeline-list" id="timeline-list" aria-live="polite"></div>
+            <div class="end-cta hidden" id="end-cta">
+              <h3>Your Nile Journey Awaits</h3>
+              <p>Explore the available cruises and find the experience that suits your journey.</p>
+              <a class="cta-button" href="listing.html">Discover Available Cruises</a>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

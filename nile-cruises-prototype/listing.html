@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ViaMondo | Available Nile Cruises</title>
+    <meta
+      name="description"
+      content="Discover the available Nile cruises for your chosen itinerary."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-listing">
+    <div class="listing-shell">
+      <header class="listing-header">
+        <div class="brand-wrap small">
+          <div class="brand-mark">V</div>
+          <div>
+            <div class="brand-name">ViaMondo</div>
+            <div class="brand-tag">Nile Cruises</div>
+          </div>
+        </div>
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="index.html">Nile Cruises</a>
+          <span>/</span>
+          <span aria-current="page">Available Cruises</span>
+        </nav>
+        <a class="back-link" href="journey.html">Return to journey</a>
+      </header>
+
+      <main class="listing-page">
+        <section class="listing-intro panel">
+          <p class="eyebrow">discover</p>
+          <h1>Discover Available Nile Cruises</h1>
+          <p id="listing-summary">
+            Ready to continue your journey? Browse the cruises that fit your selected direction.
+          </p>
+        </section>
+
+        <section class="listing-grid-wrap">
+          <div class="grid-meta">
+            <div>
+              <span class="mini-kicker">Selected itinerary</span>
+              <strong id="selected-itinerary-label">Aswan to Luxor</strong>
+            </div>
+            <div>
+              <span class="mini-kicker">Trip duration</span>
+              <strong id="selected-duration-label">4 Days / 3 Nights</strong>
+            </div>
+          </div>
+          <div id="cruise-grid" class="cruise-grid" aria-live="polite"></div>
+          <div id="empty-state" class="empty-state hidden">
+            <h3>No cruises available</h3>
+            <p>No cruise options are configured for this itinerary yet.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal="true"></div>
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" aria-label="Close cruise details">×</button>
+        <div class="modal-tabs" role="tablist" aria-label="Cruise details tabs">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="details">Cruise Details</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="gallery">Gallery</button>
+        </div>
+
+        <div class="modal-body">
+          <div id="modal-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Close image lightbox">×</button>
+      <button class="lightbox-control prev" type="button" aria-label="Previous image">‹</button>
+      <img id="lightbox-image" src="" alt="" />
+      <button class="lightbox-control next" type="button" aria-label="Next image">›</button>
+      <div id="lightbox-counter" class="lightbox-counter">1 / 1</div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

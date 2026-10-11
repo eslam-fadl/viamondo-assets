@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ViaMondo | Choose Your Nile Journey</title>
+    <meta
+      name="description"
+      content="Discover the two Nile cruise directions with ViaMondo — Aswan to Luxor or Luxor to Aswan."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-selection">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">V</div>
+          <div>
+            <div class="brand-name">ViaMondo</div>
+            <div class="brand-tag">Nile Cruises</div>
+          </div>
+        </div>
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="#">Home</a>
+          <span>/</span>
+          <a href="#">Nile Cruises</a>
+          <span>/</span>
+          <span aria-current="page">Choose Your Journey</span>
+        </nav>
+      </header>
+
+      <main class="selection-page">
+        <section class="intro-block">
+          <p class="eyebrow">via mondo</p>
+          <h1>Discover the Nile Your Way</h1>
+          <p class="intro-copy">
+            Explore ancient wonders, sail along the legendary Nile, and discover the
+            journey that suits your travel plans.
+          </p>
+        </section>
+
+        <section class="journey-grid" aria-label="Nile itinerary choices">
+          <article class="journey-card direction-south" data-itinerary="aswan-luxor" tabindex="0">
+            <div class="card-topline">
+              <span class="tag">Aswan to Luxor</span>
+              <span class="duration">4 Days / 3 Nights</span>
+            </div>
+
+            <div class="route-mini" aria-hidden="true">
+              <span class="route-point start">Aswan</span>
+              <span class="route-line"></span>
+              <span class="route-point end">Luxor</span>
+            </div>
+
+            <h2>Aswan to Luxor</h2>
+            <p>
+              Begin your journey in Aswan and sail north along the Nile, discovering
+              ancient temples and remarkable landscapes before arriving in Luxor.
+            </p>
+
+            <div class="meta-row">
+              <span>South to North</span>
+              <span>Iconic temples</span>
+            </div>
+
+            <button class="primary-action" type="button">Explore This Journey</button>
+          </article>
+
+          <article class="journey-card direction-north" data-itinerary="luxor-aswan" tabindex="0">
+            <div class="card-topline">
+              <span class="tag">Luxor to Aswan</span>
+              <span class="duration">5 Days / 4 Nights</span>
+            </div>
+
+            <div class="route-mini route-reverse" aria-hidden="true">
+              <span class="route-point start">Luxor</span>
+              <span class="route-line"></span>
+              <span class="route-point end">Aswan</span>
+            </div>
+
+            <h2>Luxor to Aswan</h2>
+            <p>
+              Start in Luxor and sail south through the heart of ancient Egypt,
+              exploring iconic temples and riverside destinations before reaching Aswan.
+            </p>
+
+            <div class="meta-row">
+              <span>North to South</span>
+              <span>Historic route</span>
+            </div>
+
+            <button class="primary-action" type="button">Explore This Journey</button>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
